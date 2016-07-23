@@ -6,24 +6,36 @@ body {
 .main {
 	background-color: white;
 	margin-top: 110px;
-	padding-left: 100px;
-	min-width: 1200px;
+	min-width: 1300px;
 	height: 500px;
 	position: relative;
 	z-index: 1;
+	display:inline-block;
 }
 
 .ryu {
-	width: 659px;
+	float:left;
+	width: 700px;
+	height: 494px;
+}
+.hulk-ryu {
+	width: 650px;
+	height: 494px;
+	float:right;
+    -webkit-filter: hue-rotate(90deg);
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+
+
+.ryu-still, .ryu-ready, .ryu-throwing, .ryu-cool {
+	width: 650px;
 	height: 494px;
 }
 
-.ryu-still, .ryu-ready, .ryu-throwing {
-	width: 659px;
-	height: 494px;
-}
-
-.ryu-ready, .ryu-throwing {
+.ryu-ready, .ryu-throwing, .ryu-cool {
 	display: none;
 }
 
@@ -41,7 +53,18 @@ body {
 	background-image: url('../images/ryu-throwing-hadouken.png');
 	
 }
-.hadouken, .ryu-still, .ryu-ready, .ryu-throwing {
+.ryu-cool {
+	background-image: url('../images/ryu-cool.gif');
+	
+}
+.fight {
+	width: 500px;
+	height: 300px;
+	position: relative;
+    margin: 0px auto;
+	background-image: url('../images/Fight.png');
+}
+.dark-hadouken, .hadouken, .ryu-still, .ryu-ready, .ryu-throwing, .ryu-cool, .fight{
 	background-repeat: no-repeat;
 }
 
@@ -52,7 +75,23 @@ body {
 	display: none;
 	float: left;
 	position: absolute;
-	top: 167px;
+	top: 300px;
 	left: 520px;
+	z-index: 10;
+}
+.dark-hadouken {
+	background-image: url('../images/hadouken.gif');
+	-webkit-filter: hue-rotate(90deg);
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+	width: 156px;
+	height: 90px;
+	display: none;
+	float: right;
+	position: absolute;
+	top: 300px;
+	left: 750px;
 	z-index: 10;
 }
